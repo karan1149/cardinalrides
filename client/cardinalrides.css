@@ -4,6 +4,7 @@ html, body{
   	 background: #FFf;
   	 -webkit-font-smoothing: antialiased;
 }
+jumbotron {text-align: center}
 body a{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
