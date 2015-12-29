@@ -1,14 +1,4 @@
-/**
-airport = null;
-direction = null;
-  Meteor.setInterval(function(){
-    airport = new ReactiveVar();
-    direction = new ReactiveVar();
-    airport.set($('[name="airport"]').val());
-    direction.set($('[name="direction"]').val());
-  //   if (airport === "--" || direction === "--") self.$('.reveal').hide();
-}, 750)
-**/
+Session.set('submitErrors', "")
 
 Session.set('airports', '--');
 Session.set('direction', '--');
@@ -24,5 +14,17 @@ Template.home.helpers({
  antiDirection: function() {
    return (Session.get('direction') === "to") ? "from" : "to";
  },
- flightStatus: function() { return (Session.get('direction') === "to") ? "departing" : "landing"}
+ flightStatus: function() { return (Session.get('direction') === "to") ? "departing" : "landing"},
+ errors: function() { return Session.get('submitErrors')}
+});
+Template.home.events({
+  'submit': function(e){
+    e.preventDefault();
+    var flight = {direction: e.target.direction.value, airport: e.target.airport.value, part: e.target.part.value, month: e.target.month.value, day: e.target.day.value, time:e.target.time.value, timeModifier: e.target.timeModifier.value, email: e.target.email.value}
+    if (isFlight(flight)) {
+      console.log("good");
+    } else {
+      return Session.set('submitErrors', "Some fields were filled out incorrectly. Please check and try again.")
+    }
+  }
 });
