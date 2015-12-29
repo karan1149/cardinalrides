@@ -23,5 +23,6 @@ Template.home.helpers({
  revealAfterAirport: function() { return (Session.get('airport') === "--" || Session.get('direction') === "--")? "hide" : ""},
  antiDirection: function() {
    return (Session.get('direction') === "to") ? "from" : "to";
- }
+ },
+ flightStatus: function() { return (Session.get('direction') === "to") ? "departing" : "landing"}
 });

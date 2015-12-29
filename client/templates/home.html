@@ -28,7 +28,7 @@
           <option value="--">--</option>
           <option value="east">east</option>
           <option value="west">west</option>
-        </select> campus<br />on <select name="month" id="month">
+        </select> campus for a flight {{flightStatus}} on <select name="month" id="month">
           <option value="--">--</option>
           <option value="January">January</option>
           <option value="February">February</option>
@@ -75,11 +75,11 @@
           <option value="29">29</option>
           <option value="30">30</option>
           <option value="31">31</option>
-        </select> at <input type="text" name="time"/> <select name="timeModifier" id="timeModifier">
+        </select> at <input type="text" name="time" placeholder="12:00"/> <select name="timeModifier" id="timeModifier">
           <option value="--">--</option>
           <option value="am">am</option>
           <option value="pm">pm</option>
-        </select></span></p>
+        </select>. My Stanford email: <input type="text" name="email" id="email" placeholder="you@stanford.edu"/><br /><div id="help-container"><span class="help">You will be sent an initial confirmation and a list of possible matches.</span></div></span></p>
 
       </form>
     </div>
