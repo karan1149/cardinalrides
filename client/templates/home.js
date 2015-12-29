@@ -20,9 +20,14 @@ Template.home.helpers({
 Template.home.events({
   'submit': function(e){
     e.preventDefault();
+    var flightId = "";
     var flight = {direction: e.target.direction.value, airport: e.target.airport.value, part: e.target.part.value, month: e.target.month.value, day: e.target.day.value, time:e.target.time.value, timeModifier: e.target.timeModifier.value, email: e.target.email.value}
     if (isFlight(flight)) {
-      console.log("good");
+      Meteor.call('addFlight', flight, function(error, id){
+        if (error) return Session.set('submitErrors', "App error.");
+        flightId = id;
+      });
+      Router.route('submitted', {_id: flightId});
     } else {
       return Session.set('submitErrors', "Some fields were filled out incorrectly. Please check and try again.")
     }
