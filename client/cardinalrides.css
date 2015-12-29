@@ -13,7 +13,7 @@ body a{
 }
 /*----start-container----*/
 .container{
-	width:70%;
+	width:85%;
 }
 /*-----start-header----*/
 .bg{
@@ -185,17 +185,23 @@ nav a#pull {
 	line-height: 1.3em;
   text-shadow:1px 1px 3px black;
 }
-.banner-info span{
+.banner-info span.divider{
 	width:15%;
-	height:2px;
+	height:3px;
 	background:#cc0000;
 	display:inline-block;
 }
 .banner-info p{
-	color: #CCCCCC;
+	color: #fff;
 	font-weight:400;
-	font-size: 1.3em;
-	line-height: 1.7em;
+	font-size: 2.2em;
+	line-height: 1.8em;
 	font-family: 'Open Sans', sans-serif;
 	margin: 1em auto;
-	width: 50%; }
+	width: 70%;
+  text-shadow: 1px 1px 1px black;
+}
+.hide { display:none;}
+  .footer {
+    background-color: #f7f7f7;
+  }
