@@ -4,7 +4,6 @@ html, body{
   	 background: #FFf;
   	 -webkit-font-smoothing: antialiased;
 }
-jumbotron {text-align: center}
 body a{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -18,8 +17,9 @@ body a{
 }
 /*-----start-header----*/
 .bg{
-	background:url(public/images/banner.jpg) no-repeat 0px 0px;
+	background:url(/images/banner.jpg) no-repeat 0px 0px;
 	background-size:cover;
+  filter:blur(100px);
 }
 .header{
 }
