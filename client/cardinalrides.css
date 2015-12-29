@@ -19,7 +19,6 @@ body a{
 .bg{
 	background:url(/images/banner.jpg) no-repeat 0px 0px;
 	background-size:cover;
-  filter:blur(100px);
 }
 .header{
 }
