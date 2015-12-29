@@ -172,7 +172,7 @@ nav a#pull {
 }
 /*---- benner ----*/
 .banner-info{
-	padding: 2em 0 8em;
+	padding: 4em 0 8em;
   text-align: center;
 }
 .banner-info h1{
@@ -201,7 +201,33 @@ nav a#pull {
 	width: 70%;
   text-shadow: 1px 1px 1px black;
 }
+.banner-info input {
+  line-height: normal;
+  font-size: .7em;
+  width: 73px;
+  color:#333;
+}
+input#email {
+  width:320px;
+  font-size:1.0em;
+}
+span.help {
+  text-shadow:1px 1px 1px black;
+  font-size:.5em;
+  line-height: normal;
+
+}
+.banner-info form {
+  min-height: 200px;
+}
+#help-container {
+  height:20px;
+}
 .hide { display:none;}
   .footer {
     background-color: #f7f7f7;
+    color:#888;
+    text-align:right;
+    width:90%;
+    padding: 20px 0px;
   }
