@@ -24,7 +24,7 @@
             <option value="OAK">OAK</option>
           </select>
           airport<br/>
-        <span class="reveal {{revealAfterAirport}}">{{antiDirection}} <select name="part" id="part">
+        <span class="{{revealAfterAirport}}">{{antiDirection}} <select name="part" id="part">
           <option value="--">--</option>
           <option value="east">east</option>
           <option value="west">west</option>
@@ -79,7 +79,9 @@
           <option value="--">--</option>
           <option value="am">am</option>
           <option value="pm">pm</option>
-        </select>. My Stanford email: <input type="text" name="email" id="email" placeholder="you@stanford.edu"/><br /><div id="help-container"><span class="help">You will be sent an initial confirmation and a list of possible matches.</span></div></span></p>
+        </select>. My Stanford email: <input type="text" name="email" id="email" placeholder="you@stanford.edu"/><br />
+        <div id="help-container"><span class="help">You will be sent an initial confirmation and a list of possible matches.</span><br /><input type="submit" class="btn" id="submit"/></div><br /> <br /></span>
+      <div class="errors">{{errors}}</div></p>
 
       </form>
     </div>
