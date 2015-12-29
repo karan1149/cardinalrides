@@ -9,8 +9,24 @@
   <div class="container">
     <div class="banner-info">
       <h1>Find Stanford students to share airport rides</h1><br />
-      <span> </span>
-      <p>We are a digital agency that believes in building things that are  meaningful!</p>
+      <span class="divider"> </span>
+      <form>
+        <p>I want to go
+          <select name="direction" id="direction">
+            <option value="--">--</option>
+            <option value="to">to</option>
+            <option value="from">from</option>
+          </select>
+          <select name="airport" id="airport">
+            <option value="--">--</option>
+            <option value="SFO">SFO</option>
+            <option value="SJC">SJC</option>
+            <option value="OAK">OAK</option>
+          </select>
+          airport<br/>
+        <span class="{{revealAfterAirport}}">campus</span></p>
+
+      </form>
     </div>
   </div>
 </div>
