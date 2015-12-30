@@ -8,7 +8,7 @@ Meteor.setInterval(function(){
   for (i=0; i<upcomingFlights.length; i++) {
     flight = upcomingFlights[i];
     var otherFlights = _.reject(Flights.find().fetch(), function(element) { return flight === element});
-    otherFlights = _.filter(otherFlights, function(element) { return Math.abs(flight.time.getTime() - element.time.getTime()) < 1000*3600*leeway });
+    otherFlights = _.filter(otherFlights, function(element) { return (Math.abs(flight.time.getTime() - element.time.getTime()) < 1000*3600*leeway) && flight.direction === element.direction && flight.airport === element.airport });
     Flights.update(flight._id, {$set: {matched:true}});
     otherFlights = _.sortBy(otherFlights, function(otherFlight) {
       return Math.abs(otherFlight.time.getTime()-flight.time.getTime())
@@ -20,4 +20,4 @@ Meteor.setInterval(function(){
       data: {matched: flight, other: otherFlights}
     });
   }
-}, 1000*1*3600);
+}, 1000*.5*3600);
