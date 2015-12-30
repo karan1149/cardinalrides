@@ -254,3 +254,20 @@ span.help {
     font-size:.4em;
     text-shadow: none;
   }
+  .submitted h2 {
+    font-size:40px;
+
+  }
+  .submitted h2 span {
+    font-size:100px;
+    color:green;
+  }
+  .flight-info {
+    text-align:left;
+    font-size:20px;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:25px;
+  }
+  .flight-info span {color:#888}
