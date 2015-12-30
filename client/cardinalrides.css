@@ -252,7 +252,7 @@ span.help {
     height:20px;
     color:#cc0000;
     font-size:.4em;
-    text-shadow: none;
+    text-shadow: 1px 1px 1px #555;
   }
   .submitted h2 {
     font-size:40px;
