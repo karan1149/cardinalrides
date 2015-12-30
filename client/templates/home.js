@@ -24,7 +24,7 @@ Template.home.events({
     var flight = {direction: e.target.direction.value, airport: e.target.airport.value, part: e.target.part.value, month: e.target.month.value, day: e.target.day.value, time:e.target.time.value, timeModifier: e.target.timeModifier.value, email: e.target.email.value}
     if (isFlight(flight)) {
       Meteor.call('addFlight', flight, function(error, result){
-        if (error) return Session.set('submitErrors', "App error.");
+        if (error) return Session.set('submitErrors', "Duplicate flight.");
         Router.go('submitted', {_id: result})
       });
     } else {
