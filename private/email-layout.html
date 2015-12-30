@@ -1,0 +1,70 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{preview}}</title>
+
+    <style type="text/css">
+      {{{css}}}
+      body {font-family:Montserrat, sans-serif; background-color: #eee;}
+      .preview-text { font-size:10px; color: #888; text-align:center;}
+      body table.body-table {margin-left:auto; margin-right:auto}
+      h1, h2, h3, h4 {font-weight:normal}
+      h3 { font-size: 30px;}
+      .flight-info {width:50%; margin-left: auto; margin-right:auto;}
+      .flight-info span {color: #888}
+    </style>
+  </head>
+  <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+
+    <!-- start body table -->
+    <table cellspacing="0" cellpadding="0" border="0" height="100%" width="90%" class="body-table">
+      <tr>
+        <td class="body" valign="top">
+
+          <p class="hide preview-text">{{#if preview}}{{preview}}{{else}}Default preview.{{/if}}</p>
+
+          <!-- begin all -->
+          <table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+            <!-- start header -->
+            <tr class="header"><td>
+
+              <table cellspacing="0" cellpadding="0" border="0" class="container"  align="center">
+                <tr>
+                  <td class="header__content" valign="top">
+
+                    <img src="http://cardinalrides.com/images/logo.png" width="197"/>
+
+                  </td>
+                </tr>
+              </table>
+            </td></tr><!-- end header -->
+
+            <!-- MAIN TEMPLATE CONTENT -->
+
+            <tr class="template-content" align="center">
+              <td>
+                {{{ body }}}
+              </td>
+            </tr>
+
+            <!-- end MAIN TEMPLATE CONTENT -->
+
+
+            <!-- begin footer -->
+            <tr class="footer" align="right">
+              <td>
+                <p><small>Sent by Cardinal Rides</small></p>
+              </td>
+            </tr>
+            <!-- end footer -->
+
+          </table><!-- end -->
+        </td>
+      </tr>
+    </table><!-- end body table -->
+
+  </body>
+</html>
