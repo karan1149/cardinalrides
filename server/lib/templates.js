@@ -20,7 +20,6 @@ Templates.confirmation = {
   route: {
     path: '/confirmation/:_id',
     data: function(params) { // return object, not cursor
-      console.log(Flights.find().fetch());
       return Flights.findOne(params._id);
     }
   }
@@ -28,6 +27,25 @@ Templates.confirmation = {
 Templates.matches = {
   path: 'matches.html',
   helpers: {
-    preview() {return "We've found some matches!"}
+    preview() {return "We found some matches!"},
+    areOthers() { return this.other.length > 0},
+    getLeeway() {return leeway},
+    antiDirection() {return this.matched.direction === "to" ? "from" : "to"},
+    pacificTime: function() {
+      var difference = getPacificOffset()*60 - this.matched.time.getTimezoneOffset()*-1;
+      var newDate = new Date(this.matched.time.getTime() + difference*60*1000);
+      return newDate.toString().substring(0,16) + getFormattedTime(newDate.toString().substring(16,21));
+    },
+    pacificTimeDirect: function() {
+      var difference = getPacificOffset()*60 - this.time.getTimezoneOffset()*-1;
+      var newDate = new Date(this.time.getTime() + difference*60*1000);
+      return newDate.toString().substring(0,16) + getFormattedTime(newDate.toString().substring(16,21));
+    }
+  } ,
+  route: {
+    path: '/matches/:_id/:_id2/:_id3',
+    data: function(params) {
+      return {matched: Flights.findOne(params._id), other: [Flights.findOne(params._id2), Flights.findOne(params._id3)]};
+    }
   }
 };
