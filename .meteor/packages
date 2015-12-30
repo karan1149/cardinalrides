@@ -18,8 +18,7 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 twbs:bootstrap
 iron:router
-accounts-password
-ian:accounts-ui-bootstrap-3
 check
-audit-argument-checks
 sacha:spin
+lookback:emails
+audit-argument-checks
