@@ -1,5 +1,6 @@
 leeway = 3;
 
+
 Meteor.setInterval(function(){
   date = new Date();
   var upcomingFlights = _.filter(Flights.find({matched : {$ne: true}}).fetch(), function(flight){
@@ -19,5 +20,6 @@ Meteor.setInterval(function(){
       template: 'matches',
       data: {matched: flight, other: otherFlights}
     });
+    console.log("matches" + otherFlights.length);
   }
-}, 1000*.5*3600);
+}, 1000*1*3600);
