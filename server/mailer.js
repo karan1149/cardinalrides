@@ -6,7 +6,7 @@ Mailer.config({
   testEmail: 'ksinghal@stanford.edu',                    // Default address to send test emails to.
   logger: console,                 // Injected logger (see further below)
   silent: true,                      // If set to `true`, any `Logger.info` calls won't be shown in the console to reduce clutter.
-  addRoutes: true, // ##deploy Add routes for previewing and sending emails. Defaults to `true` in development.
+  addRoutes: false, // ##deploy Add routes for previewing and sending emails. Defaults to `true` in development.
   language: 'html' ,                   // The template language to use. Defaults to 'html', but can be anything Meteor SSR supports (like Jade, for instance).
   plainText: true,                     // Send plain text version of HTML email as well.
   plainTextOpts: {ignoreImage:true}                   // Options for `html-to-text` module. See all here: https://www.npmjs.com/package/html-to-text
