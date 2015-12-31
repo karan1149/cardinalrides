@@ -207,6 +207,9 @@ nav a#pull {
   width: 73px;
   color:#333;
 }
+.banner-info select {
+  color:black;
+}
 input#email {
   width:320px;
   font-size:1.0em;
