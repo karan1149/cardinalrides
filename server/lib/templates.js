@@ -27,7 +27,7 @@ Templates.confirmation = {
 Templates.matches = {
   path: 'matches.html',
   helpers: {
-    preview() {return "We found some matches!"},
+    preview() {return "View your matches!"},
     areOthers() { return this.other.length > 0},
     getLeeway() {return leeway},
     antiDirection() {return this.matched.direction === "to" ? "from" : "to"},
